@@ -5,26 +5,21 @@
     <div>
       Selecione uma classe:
       <select #classe (change)="0">
-        <option value="alert-success">Sucesso</option>
-
-        <option value="alert-danger">Erro</option>
+        <option value="alert-success">Deu certo</option>
+        <option value="alert-danger">Deu errado</option>
       </select>
       <br><br>
-
       <div class="alert {{ classe.value }}" role="alert">
-        Texto colorido conforme valor do combobox.
+        A cor muda ao mudar o select
       </div>
-
       <div class="alert" role="alert"
         [class.alert-success]="classe.value == 'alert-success'">
-        Sucesso
+        Se ficou Verde, deu certo :)
       </div>
-
       <div class="alert alert-danger" role="alert"
         [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
-        Esse texto somente aparece em caso de erro.
+        Se ficou Vermelho, deu errado :(
       </div>
-
     </div>
   </article>
 
