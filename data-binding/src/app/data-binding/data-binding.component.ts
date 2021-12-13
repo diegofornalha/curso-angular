@@ -3,8 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-data-binding',
   templateUrl: './data-binding.component.html',
-  //styleUrls: ['./data-binding.component.css']
-  styles: [
+ styles: [
     `
       .highlight {
           background-color: yellow;
@@ -16,40 +15,28 @@ import { Component, OnInit } from '@angular/core';
 export class DataBindingComponent implements OnInit {
 
 
-  valorAtual: string = '';
+  valorAtual = '';
   valorSalvo = '';
 
-  isMouseOver: boolean = false;
+  isMouseOver = true;
 
-  nomeDoCurso: string = 'Angular';
-
-  valorInicial = 15;
-
-  getValor(){
-    return 1;
-  }
-
-  getCurtirCurso(){
-    return true;
-  }
-
-  botaoClicado(){
+  botaoClicado() {
     alert('Botão clicado!');
   }
 
-  onKeyUp(evento: KeyboardEvent){
+  onKeyUp(evento: KeyboardEvent) {
     this.valorAtual = (<HTMLInputElement>evento.target).value;
   }
 
-  salvarValor(valor: string){
+  salvarValor(valor: string) {
     this.valorSalvo = valor;
   }
 
-  onMouseOverOut(){
+  onMouseOverOut() {
     this.isMouseOver = !this.isMouseOver;
   }
 
-  onMudouValor(evento: { novoValor: any; }){
+  onMudouValor(evento: { novoValor: any; }) {
     console.log(evento.novoValor);
   }
 

@@ -1,7 +1,4 @@
-<section class="property-binding">
-
 <section class="event-binding">
-
   <article>
     <h3>Event binding</h3>
     <div>
@@ -18,8 +15,10 @@
         (blur)="salvarValor(campoInput.value)"
         #campoInput />
 
-       <p>Valor atual: {{ valorAtual }}</p>
-       <p>Valor salvo: {{ valorSalvo }}</p>
+      <br><br>
+
+       <p>Valor Atual: {{ valorAtual }}</p>
+       <p>Valor Salvo: {{ valorSalvo }}</p>
 
        <br>
        <span
@@ -27,7 +26,7 @@
         (mouseout)="onMouseOverOut()"
         [class.highlight]="isMouseOver"
         >
-         Passe o mouse sobre mim
+         Passe o mouse sobre mim!
       </span>
     </div>
   </article>
