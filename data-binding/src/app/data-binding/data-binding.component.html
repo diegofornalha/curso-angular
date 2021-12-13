@@ -1,34 +1,12 @@
 <section class="event-binding">
   <article>
-    <h3>Event binding</h3>
     <div>
-      <button (click)="botaoClicado()"
-      class="btn btn-primary">
-        Me clique!
-      </button>
-
-      <br><br>
-
+      <h4>Escreva para reproduzir abaixo</h4>
       <input type="text"
         (keyup)="onKeyUp($event)"
-        (keyup.enter)="salvarValor(campoInput.value)"
-        (blur)="salvarValor(campoInput.value)"
         #campoInput />
-
-      <br><br>
-
-       <p>Valor Atual: {{ valorAtual }}</p>
-       <p>Valor Salvo: {{ valorSalvo }}</p>
-
-       <br>
-       <span
-        (mouseover)="onMouseOverOut()"
-        (mouseout)="onMouseOverOut()"
-        [class.highlight]="isMouseOver"
-        >
-         Passe o mouse sobre mim!
-      </span>
+        <br>
+        <p> {{valorAtual}}</p>
     </div>
   </article>
 </section>
-
