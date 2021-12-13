@@ -15,9 +15,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataBindingComponent implements OnInit {
 
-  url: string = 'http://loiane.com';
-  cursoAngular: boolean = true;
-  urlImagem = 'http://lorempixel.com/400/200/nature/';
 
   valorAtual: string = '';
   valorSalvo = '';
@@ -44,7 +41,7 @@ export class DataBindingComponent implements OnInit {
     this.valorAtual = (<HTMLInputElement>evento.target).value;
   }
 
-  salvarValor(valor){
+  salvarValor(valor: string){
     this.valorSalvo = valor;
   }
 
@@ -52,7 +49,7 @@ export class DataBindingComponent implements OnInit {
     this.isMouseOver = !this.isMouseOver;
   }
 
-  onMudouValor(evento){
+  onMudouValor(evento: { novoValor: any; }){
     console.log(evento.novoValor);
   }
 
